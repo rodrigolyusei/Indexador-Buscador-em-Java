@@ -4,9 +4,18 @@ package src;
 
 public class Indexador {
     public static void main(String[] args) {
-
         ManipulaArquivo manipulaArquivo = new ManipulaArquivo();
-        manipulaArquivo.ler("./data/teste.txt");
+
+        switch(args.length){
+            case 1:
+                manipulaArquivo.ler(args[0]);
+                break;
+            case 2:
+                manipulaArquivo.ler(args[0]);
+                break;
+            default:
+                System.out.println("Argumento inválido");
+        }
         
     }
 }
